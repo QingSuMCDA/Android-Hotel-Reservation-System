@@ -20,3 +20,6 @@ The unfinished works are as follow:
 1. I cannot resolve the unknown crash when requesting web API data; (I do understand new thread cannot interact with the main thread indirectly, but this crash happened even without starting a new thread);
 2. Displaying the detailed booking information: 
 3. Giving users their booking successfully feedback. 
+
+![image](https://github.com/QingSuMCDA/Android-Hotel-Reservation-System/blob/0d5e94d528e17693377d9ae563727df21e622aa9/IMG/Screen_1_1.png)
+
