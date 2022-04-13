@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RecyclerViewDemo</string>
+    <string name="welcome_title">Welcome to Romance Hotel Reservation App</string>
+    <string name="check_in_date">Check-in Date</string>
+    <string name="check_out_date">Check-out Date</string>
+    <string name="completing">Your Reservation Has Been Confirmed. Thank You!</string>
+
+</resources>

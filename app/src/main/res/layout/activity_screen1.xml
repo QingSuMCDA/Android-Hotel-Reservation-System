@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow"
+    tools:context=".ActivityScreen1">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/welcome_title"
+                android:textAlignment="center"
+                android:textColor="@color/dark"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/check_in_date_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:text="@string/check_in_date"
+                android:textAlignment="textStart"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <DatePicker
+                android:id="@+id/dp_checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/check_in_date_text_view"
+                app:layout_constraintTop_toBottomOf="@id/check_in_date_text_view" />
+
+            <TextView
+                android:id="@+id/tv_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:text="@string/check_out_date"
+                android:textAlignment="textStart"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dp_checkin" />
+
+            <DatePicker
+                android:id="@+id/dp_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/tv_checkout"
+                app:layout_constraintTop_toBottomOf="@id/tv_checkout" />
+
+            <TextView
+                android:id="@+id/guests_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:text="Number of Guests"
+                android:textAlignment="textStart"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dp_checkout" />
+
+            <EditText
+                android:id="@+id/et_guest_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Guests Count"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="@id/guests_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guests_text_view"
+                app:layout_constraintTop_toTopOf="@id/guests_text_view" />
+
+            <TextView
+                android:id="@+id/name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:text="Enter Your Name"
+                android:textAlignment="textStart"
+                android:textColor="@color/dark"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/guests_text_view"
+                app:layout_constraintTop_toBottomOf="@id/guests_text_view" />
+
+            <EditText
+                android:id="@+id/et_guest_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"
+                app:layout_constraintBottom_toBottomOf="@id/name_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/name_text_view"
+                app:layout_constraintTop_toTopOf="@id/name_text_view" />
+
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guests_text_view"
+                app:layout_constraintTop_toBottomOf="@id/name_text_view" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="confirmSearch"
+                android:text="CONFIRM MY SEARCH"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_confirm" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="jumpToHotelList"
+                android:text="SEARCH"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_confirm"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/btn_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="cleanInputText"
+                android:text="Clear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+
+            <Button
+                android:id="@+id/retrieve_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Retrieve From Shared Pref"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_clean" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

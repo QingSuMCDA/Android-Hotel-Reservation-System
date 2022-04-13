@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityScreen3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tv_confirm_hotel_title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Hotel Name:"/>
+        <TextView
+            android:id="@+id/tv_confirm_hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tv_check_in_title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Check-in Date:"/>
+        <TextView
+            android:id="@+id/tv_confirm_check_in_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tv_check_out_title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Check-out Date:"/>
+        <TextView
+            android:id="@+id/tv_confirm_check_out_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tv_price_title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Price:"/>
+        <TextView
+            android:id="@+id/tv_confirm_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/tv_guest_name_title"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Guest Name"/>
+
+        <TextView
+            android:id="@+id/tv_confirm_guest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_below="@+id/tv_guest_name_title" />
+
+        <LinearLayout
+            android:layout_below="@+id/tv_guest_name_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_confirm_guest_name"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Edit" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Please select the gender" />
+
+    <RadioGroup
+        android:id="@+id/rg_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="Female"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/query"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:text="Confirm"
+        android:onClick="confirm"
+        android:background="@color/cardview_dark_background"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+</LinearLayout>
