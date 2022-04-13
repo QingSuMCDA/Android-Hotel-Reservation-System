@@ -1,5 +1,5 @@
 # Android-Hotel-Reservation-System
-This is the demo of Android development project
+This is the demo of Android development project. 
 The works or functions I have completed are as follows:
 1. Setting colors and themes in color.xml and theme.xml files;
 2. Creating call back functions to receive inputs from UI;
